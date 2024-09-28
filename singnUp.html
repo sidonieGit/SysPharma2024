@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+	<link rel="stylesheet" href="css/styleForm.css">
+
+	<title>Document</title>
+</head>
+
+
+<body>
+	<div id="maZone">ma zone</div>
+	<div class="container">
+		<form action="" id="signupForm">
+			<h1>Register Form</h1>
+			<div class="box">
+				<label for="username">username</label>
+				<input type="text" name="username" id="username" />
+				<div class="error"></div>
+			</div>
+			<div class="box">
+				<label for="email">Email</label>
+				<input type="email" name="email" id="email" />
+				<div class="error"></div>
+			</div>
+			<div class="box">
+				<label for="password">Passcord</label>
+				<input type="password" name="password" id="password">
+				<div class="error"></div>
+			</div>
+			<div class="box">
+				<label for="psw">Confirm Password <label>
+						<input type="password" name="psw" id="psw">
+						<div class="error"></div>
+			</div>
+			<button id="btn" type="submit">Register Now</button>
+		</form>
+	</div>
+
+	<div class="link">
+		<a href="loginForm.html">Already have an account</a>
+	</div>
+
+	<script src="js/singUp.js"></script>
+</body>
+
+</html>

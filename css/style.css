@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Redressed&display=swap");
+
+:root {
+  --color-white: #ffffff;
+  --color-primary: #8338ec;
+  --color-gray: #f3f4f6;
+  --color-secondary: #fb5607;
+  --color-black: #222222;
+  --color-gray-dark: #b9b9b9;
+  --color-gray-danger: #ff006e;
+  --font-base: "Merriweather";
+  --font-header: "Redressed";
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+}
+h1,
+h2 {
+  text-align: center;
+  color: var(--color-gray);
+}
+.bandef {
+  white-space: nowrap;
+  overflow: hidden;
+  visibility: visible;
+  width: 100vw; /* La largeur de la fenêtre pour garantir que le texte ne soit pas caché */
+  position: relative;
+}
+
+.bandef h1 {
+  display: inline-block; /* Pour que le texte reste sur une seule ligne lors du défilement */
+  padding-left: 100%; /* Ajoute un espace initial pour que le texte démarre hors de la vue */
+  -webkit-animation: marquee 20s linear infinite;
+  animation: marquee 20s linear infinite;
+}
+
+@-webkit-keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  } /* Commence le texte à droite de l'écran */
+  100% {
+    transform: translateX(-100%);
+  } /* Le texte sort par la gauche */
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.container1 {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #010610, #c5c0c6);
+  padding: 10px;
+}
+
+.redressed {
+  font-family: "Redressed", cursive;
+}
+.merriweather {
+  font-family: "Merriweather", serif;
+}
+
+.cc-navbar {
+  background-color: rgba(0, 0, 0, 0.55); /* Correction ici avec rgba */
+  font-family: "Merriweather", serif;
+  box-shadow: 1px 1px 3px rgba(255, 255, 255, 0.54);
+  z-index: 99;
+}
+
+.cc-navbar .nav-link {
+  border-bottom: 1px solid transparent;
+  transition: padding-bottom 0.4s ease-out, border-color 0.3s ease;
+}
+
+.banner,
+.order-form,
+.contactForm {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../img/banner-bg.jpg) center center fixed no-repeat;
+  background-size: cover;
+  height: 700px;
+}
+.order-form {
+  height: 500px;
+}
+
+button a {
+  text-decoration: none;
+  color: var(--color-gray);
+}
+.contactForm {
+  height: 400px;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+}
+/* Style pour les champs valides */
+input:valid,
+select:valid,
+textarea:valid {
+  border-color: #28a745; /* Vert pour indiquer la validation */
+  box-shadow: 0 0 5px rgba(40, 167, 69, 0.5); /* Ombre verte pour effet */
+}
+
+/* Style pour les champs invalides */
+input:invalid,
+select:invalid,
+textarea:invalid {
+  border-color: #dc3545; /* Rouge pour indiquer l'invalidation */
+  box-shadow: 0 0 5px rgba(220, 53, 69, 0.5); /* Ombre rouge pour effet */
+}
+
+/* Style pour les messages d'erreur */
+.msg {
+  color: #dc3545; /* Rouge pour indiquer l'erreur */
+  font-size: 0.875rem; /* Taille de police plus petite */
+  margin-top: 5px; /* Un peu d'espace au-dessus du message */
+  display: block; /* Affiche le message en tant que bloc pour qu'il prenne toute la largeur */
+}
+
+/* Exemple de style pour le label qui affiche l'erreur */
+.invalid + .msg {
+  color: #dc3545; /* Assurez-vous que le message d'erreur est visible */
+}
+
+.banner .banner-desc {
+  font-size: 48px;
+  font-weight: 400px;
+  color: #fff;
+  margin-top: 200px;
+}
+.cc-menu {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), #00000080),
+    url(../img/banner3.jpg) center center fixed no-repeat;
+  background-size: cover;
+  height: 1500px;
+}
+
+/* Hover effect */
+.cc-navbar .nav-link:hover {
+  padding-bottom: 20px;
+  border-bottom-color: var(--bs-teal);
+}
+
+.btn-order {
+  color: var(--bs-teal);
+  border-color: var(--bs-teal);
+  transition: 0.5s;
+}
+
+.btn-order:hover,
+.btn-order:active {
+  color: #fff;
+  background-color: var(--bs-teal);
+}
+/* merci */
+
+#merci,
+#mercii {
+  padding-top: 100px;
+}
+
+.product-card {
+  border: none;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+}
+
+/* Footer */
+.container-footer {
+  position: fixed; /* Pour que le footer reste en bas de page */
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--color-black);
+  color: var(--color-primary);
+  font-family: var(--font-base);
+  padding: 20px;
+  text-align: center; /* Centrage du contenu du footer */
+}
+
+.blinking-button {
+  animation: blinking 1s infinite;
+}
+
+@keyframes blinking {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
