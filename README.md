@@ -29,9 +29,11 @@ Ce projet est une démonstration simple d'une interface de gestion de médicamen
 ### Étapes
 
 1. **Cloner le projet** :
+
    ```bash
-   git clone https://github.com/sidonieGit/Syspharma-personalProject.git
+   git clone https://sidoniegit.github.io/SysPharma2024/.git
    ```
+
    ```
 
    ```

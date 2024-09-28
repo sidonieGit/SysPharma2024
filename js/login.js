@@ -167,7 +167,7 @@ document.addEventListener("DOMContentLoaded", function () {
 // Charger les médicaments depuis un fichier JSON
 async function fetchMedicaments() {
   try {
-    const response = await fetch("../data/medicaments.json");
+    const response = await fetch("/data/medicaments.json");
     if (!response.ok) {
       throw new Error("Erreur de chargement des médicaments");
     }
